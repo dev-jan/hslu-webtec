@@ -16,10 +16,13 @@ function loadContentPage(pagename) {
     success: function(data) {
       $("#maincontent").html(data)
       console.log("loading content successfull")
-      console.log(data)
     },
     error: function(error) {
       console.log("error loading content: " + error)
+      // show error page
+      if (pagename !== "error") {
+        loadContentPage("error");
+      }
     }
   })
 }
