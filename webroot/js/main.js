@@ -8,6 +8,44 @@ function toggleNavigationToolbar() {
   }
 }
 
+function validateAndSendForm() {
+  var email = $("#contactform :input[name='email']")
+  var name = $("#contactform :input[name='name']")
+  var message = $("#contactform :input[name='message']")
+  var errortext = $("#errortext")
+  var errors = false;
+
+  // reset all errors
+  email.removeClass("error")
+  name.removeClass("error")
+  message.removeClass("error")
+  errortext.html("")
+
+  console.log("email=" + email.val() + ", name=" + name.val() + ", message=" + message.val())
+
+  if (email.val() === "") {
+    errors = true;
+    console.log("email error")
+    email.addClass("error")
+  }
+  if (name.val() === "") {
+    errors = true;
+    name.addClass("error")
+  }
+  if (message.val() === "") {
+    errors = true;
+    message.addClass("error")
+  }
+
+  if (errors) {
+    errortext.html("Leider sind Fehler aufgetreten...")
+  }
+  else {
+    // TODO: send to backend with AJAX
+  }
+
+}
+
 function loadContentPage(pagename) {
   console.log("load page " + pagename)
   $.ajax({

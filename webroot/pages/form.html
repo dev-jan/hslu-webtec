@@ -1,3 +1,23 @@
-<div class="row">
-  <p>form content coming soon...</p>
+<!DOCTYPE html>
+<div class="form-section">
+  <div class="container">
+    <h2>Kontaktformular</h2>
+    <form id="contactform">
+      <div class="row">
+        <div class="six columns">
+          <label for="email">E-Mail</label>
+          <input class="u-full-width" placeholder="your@mail.com" id="email" name="email" type="email" />
+        </div>
+        <div class="six columns">
+          <label for="name">Name</label>
+          <input class="u-full-width" placeholder="Name" id="name" name="name" type="text" />
+        </div>
+      </div>
+      <label for="message">Nachricht</label>
+      <textarea class="u-full-width" id="message" name="message"></textarea>
+
+      <div id="errortext"></div>
+      <input class="button-primary" value="Senden" type="button" onclick="validateAndSendForm()" />
+    </form>
+  </div>
 </div>

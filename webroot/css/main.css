@@ -65,6 +65,21 @@ footer .text {
   color: #FFF;
 }
 
+/* FORM PAGE */
+.form-section {
+  padding-top: 3em;
+}
+
+form .error {
+  border: 1px solid #ef1a1a;
+}
+form .error:focus {
+  border: 1px solid #f74040;
+}
+form #errortext {
+  color: #ef1a1a;
+}
+
 /* ERROR PAGE */
 .error-section {
   background: #a90329; /* Old browsers */
