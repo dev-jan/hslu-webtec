@@ -65,6 +65,10 @@ footer .text {
   color: #FFF;
 }
 
+.css-change-section {
+  margin-top: 3em;
+}
+
 .stylechanger {
   cursor: pointer;
   padding: 0.5em;
