@@ -68,9 +68,11 @@ function loadContentPage(pagename) {
 function changeStyle(stylename) {
   console.log("change style to " + stylename)
   $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', 'css/themes/' + stylename + ".css"))
+  Cookies.set('style', stylename, { expires: 365 });
 }
 
 function init() {
+  // load correct subpage via AJAX
   var hash = window.location.hash;
   if (hash) {
     loadContentPage(hash.replace("#", ""))
@@ -78,6 +80,13 @@ function init() {
   else {
     loadContentPage('home')
   }
+
+  // init page with correct style
+  var stylename = Cookies.get('style')
+  if (stylename === undefined){
+    stylename = 'black'
+  }
+  changeStyle(stylename)
 }
 $(document).ready(
   init()
