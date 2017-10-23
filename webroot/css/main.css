@@ -65,6 +65,24 @@ footer .text {
   color: #FFF;
 }
 
+.stylechanger {
+  cursor: pointer;
+  padding: 0.5em;
+}
+
+.stylechanger.red {
+  background-color: #d60c0c;
+  color: #640108;
+}
+.stylechanger.blue {
+  background-color: #001582;
+  color: #d3d8e5;
+}
+.stylechanger.black {
+  background-color: #14121B;
+  color: #eaeaea;
+}
+
 /* FORM PAGE */
 .form-section {
   padding-top: 3em;

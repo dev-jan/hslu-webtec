@@ -65,6 +65,11 @@ function loadContentPage(pagename) {
   })
 }
 
+function changeStyle(stylename) {
+  console.log("change style to " + stylename)
+  $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', 'css/themes/' + stylename + ".css"))
+}
+
 function init() {
   var hash = window.location.hash;
   if (hash) {
