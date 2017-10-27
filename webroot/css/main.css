@@ -1,3 +1,7 @@
+body {
+    overflow-y: scroll;
+}
+
 /* navigation */
 .topnav {
   overflow: hidden;
