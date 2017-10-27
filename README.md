@@ -9,7 +9,7 @@ WEBTEC website Jan Bucher
 # Deployment
 Just serve all files of the webroot folder with a standard webserver.
 
-Configuration for apache2: [apache2-webtec.conf]
+Configuration for apache2: [apache2-webtec.conf](apache2-webtec.conf)
 
 Generate Letsencrypt certificate:
 ```
