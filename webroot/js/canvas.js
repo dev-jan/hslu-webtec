@@ -52,6 +52,10 @@ function clearContent() {
   }
 }
 
+function downloadCanvas() {
+  ReImg.fromCanvas(canvas).downloadPng()
+}
+
 $(document).ready(
   init()
 )
