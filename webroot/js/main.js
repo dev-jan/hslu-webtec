@@ -76,6 +76,7 @@ function loadContentPage(pagename) {
     dataType: "html",
     success: function(data) {
       $("#maincontent").html(data)
+      setMenuActive(pagename)
       console.log("loading content successfull")
     },
     error: function(error) {
@@ -86,6 +87,11 @@ function loadContentPage(pagename) {
       }
     }
   })
+}
+
+function setMenuActive(pagename) {
+  $(".topnav>a.active").removeClass("active")
+  $("#nav_" + pagename).addClass("active")
 }
 
 function changeStyle(stylename) {
