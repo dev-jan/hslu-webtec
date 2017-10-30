@@ -64,7 +64,7 @@ footer .text {
 }
 
 .home-section .container {
-  background: #3E3E3ECC;
+  background: rgba(62, 62, 62, 0.8);
   padding: 1em;
   color: #FFF;
 }
@@ -101,7 +101,7 @@ footer .text {
 }
 
 .canvas-section .container {
-  background: #3E3E3ECC;
+  background: rgba(62, 62, 62, 0.8);
   padding: 1em;
   color: #FFF;
 }
