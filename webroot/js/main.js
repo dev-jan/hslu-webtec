@@ -1,10 +1,10 @@
 
 function toggleNavigationToolbar() {
-  var x = document.getElementById("myTopnav");
+  var x = document.getElementById("myTopnav")
   if (x.className === "topnav") {
-    x.className += " responsive";
+    x.className += " responsive"
   } else {
-    x.className = "topnav";
+    x.className = "topnav"
   }
 }
 
@@ -13,7 +13,7 @@ function validateAndSendForm() {
   var name = $("#contactform :input[name='name']")
   var message = $("#contactform :input[name='message']")
   var errortext = $("#errortext")
-  var errors = false;
+  var errors = false
 
   // reset all errors
   email.removeClass("error")
@@ -24,16 +24,16 @@ function validateAndSendForm() {
   console.log("email=" + email.val() + ", name=" + name.val() + ", message=" + message.val())
 
   if (email.val() === "") {
-    errors = true;
+    errors = true
     console.log("email error")
     email.addClass("error")
   }
   if (name.val() === "") {
-    errors = true;
+    errors = true
     name.addClass("error")
   }
   if (message.val() === "") {
-    errors = true;
+    errors = true
     message.addClass("error")
   }
 
@@ -83,7 +83,7 @@ function loadContentPage(pagename) {
       console.log("error loading content: " + error)
       // show error page
       if (pagename !== "error") {
-        loadContentPage("error");
+        loadContentPage("error")
       }
     }
   })
@@ -97,12 +97,12 @@ function setMenuActive(pagename) {
 function changeStyle(stylename) {
   console.log("change style to " + stylename)
   $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', 'css/themes/' + stylename + ".css"))
-  Cookies.set('style', stylename, { expires: 365 });
+  Cookies.set('style', stylename, { expires: 365 })
 }
 
 function init() {
   // load correct subpage via AJAX
-  var hash = window.location.hash;
+  var hash = window.location.hash
   if (hash) {
     loadContentPage(hash.replace("#", ""))
   }
