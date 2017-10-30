@@ -6,6 +6,7 @@ WEBTEC website Jan Bucher
 - JQuery 2.1.1
 - js-cookie (https://github.com/js-cookie/js-cookie)
 - reimg (https://github.com/gillyb/reimg)
+- sweetalert (https://sweetalert.js.org/)
 
 # Deployment
 Just serve all files of the webroot folder with a standard webserver.

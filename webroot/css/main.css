@@ -2,6 +2,10 @@ body {
     overflow-y: scroll;
 }
 
+.swal-button {
+  padding: 0px 24px;
+}
+
 /* navigation */
 .topnav {
   overflow: hidden;
