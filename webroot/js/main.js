@@ -41,7 +41,22 @@ function validateAndSendForm() {
     errortext.html("Leider sind Fehler aufgetreten...")
   }
   else {
-    // TODO: send to backend with AJAX
+    $.ajax({
+      url: '/dynamic/form.php',
+      type: 'POST',
+      data: {
+        'email': email,
+        'name': name,
+        'message': message
+      },
+      success: function(data) {
+        alert(data)
+        $("#contactform").reset()
+      },
+      error: function(error) {
+        console.log("Error while sending form:" + error)
+      }
+    })
   }
 
 }
