@@ -51,7 +51,7 @@ function validateAndSendForm() {
       },
       success: function(data) {
         alert(data)
-        $("#contactform").reset()
+        $("#contactform")[0].reset()
       },
       error: function(error) {
         console.log("Error while sending form:" + error)
