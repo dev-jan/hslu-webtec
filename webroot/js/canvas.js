@@ -44,12 +44,23 @@ function init() {
 }
 
 function clearContent() {
-  var answer = confirm("Wirklich?")
-  if (answer) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-    ctx.fillStyle = "white"
-    ctx.fillRect(0, 0, canvas.width, canvas.height)
-  }
+  swal("Wirklich löschen?", {
+        buttons: {
+          cancel: "Abbrechen",
+          delete: {
+            text: "Löschen",
+            value: "delete"
+          }
+        },
+        icon: "warning"
+      })
+      .then((value) => {
+        if (value == "delete") {
+          ctx.clearRect(0, 0, canvas.width, canvas.height)
+          ctx.fillStyle = "white"
+          ctx.fillRect(0, 0, canvas.width, canvas.height)
+        }
+      });
 }
 
 function downloadCanvas() {

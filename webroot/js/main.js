@@ -50,11 +50,19 @@ function validateAndSendForm() {
         'message': message
       },
       success: function(data) {
-        alert(data)
+        swal({
+          title: "Nachricht gesendet",
+          text: data,
+          icon: "success",
+        })
         $("#contactform")[0].reset()
       },
       error: function(error) {
-        console.log("Error while sending form:" + error)
+        swal({
+          title: "Error",
+          text: error,
+          icon: "error",
+        })
       }
     })
   }
