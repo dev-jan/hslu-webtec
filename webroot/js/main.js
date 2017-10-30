@@ -45,9 +45,9 @@ function validateAndSendForm() {
       url: '/dynamic/form.php',
       type: 'POST',
       data: {
-        'email': email,
-        'name': name,
-        'message': message
+        'email': email.val(),
+        'name': name.val(),
+        'message': message.val()
       },
       success: function(data) {
         swal({
