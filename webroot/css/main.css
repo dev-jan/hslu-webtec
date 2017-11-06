@@ -142,6 +142,7 @@ form #errortext {
 .error-section {
   background: #a90329; /* Old browsers */
   background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
+  color: #eaeaea;
   height: 500px;
   padding-top: 3em;
 }
