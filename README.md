@@ -4,6 +4,7 @@ WEBTEC website Jan Bucher
 # Used frameworks
 - Skeleton CSS framework (http://getskeleton.com/)
 - JQuery 2.1.1
+- Font Awesome 4.7.0 (http://fontawesome.io/)
 - js-cookie (https://github.com/js-cookie/js-cookie)
 - reimg (https://github.com/gillyb/reimg)
 - sweetalert (https://sweetalert.js.org/)
