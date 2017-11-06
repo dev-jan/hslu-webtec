@@ -25,7 +25,6 @@ function validateAndSendForm() {
 
   if (email.val() === "") {
     errors = true
-    console.log("email error")
     email.addClass("error")
   }
   if (name.val() === "") {
@@ -38,7 +37,7 @@ function validateAndSendForm() {
   }
 
   if (errors) {
-    errortext.html("Leider sind Fehler aufgetreten...")
+    errortext.html("Bitte die fehlerhaften Felder korrigieren (alle Felder sind obligatorisch)")
   }
   else {
     $.ajax({
@@ -66,7 +65,6 @@ function validateAndSendForm() {
       }
     })
   }
-
 }
 
 function loadContentPage(pagename) {
@@ -77,7 +75,6 @@ function loadContentPage(pagename) {
     success: function(data) {
       $("#maincontent").html(data)
       setMenuActive(pagename)
-      console.log("loading content successfull")
     },
     error: function(error) {
       console.log("error loading content: " + error)
@@ -95,7 +92,6 @@ function setMenuActive(pagename) {
 }
 
 function changeStyle(stylename) {
-  console.log("change style to " + stylename)
   $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', 'css/themes/' + stylename + ".css"))
   Cookies.set('style', stylename, { expires: 365 })
 }
