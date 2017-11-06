@@ -59,8 +59,15 @@ body {
 }
 
 /* FOOTER */
+footer {
+  padding-bottom: 20px;
+}
 footer .text {
   text-align: center;
+}
+
+footer a {
+  text-decoration: none;
 }
 
 /* HOME */
@@ -136,6 +143,21 @@ form .error:focus {
 }
 form #errortext {
   color: #ef1a1a;
+}
+
+/* ABOUT PAGE */
+.about-section {
+  background-image: url(../resources/about.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 500px;
+  padding-top: 3em;
+}
+
+.about-section .container {
+  background: rgba(62, 62, 62, 0.8);
+  padding: 1em;
+  color: #FFF;
 }
 
 /* ERROR PAGE */
