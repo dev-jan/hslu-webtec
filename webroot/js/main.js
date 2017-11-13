@@ -67,6 +67,17 @@ function validateAndSendForm() {
   }
 }
 
+function loadContentPageFromHash(hash) {
+  // load correct subpage via AJAX
+  var hash = window.location.hash
+  if (hash) {
+    loadContentPage(hash.replace("#", ""))
+  }
+  else {
+    loadContentPage('home')
+  }
+}
+
 function loadContentPage(pagename) {
   console.log("load page " + pagename)
   $.ajax({
@@ -97,14 +108,11 @@ function changeStyle(stylename) {
 }
 
 function init() {
-  // load correct subpage via AJAX
-  var hash = window.location.hash
-  if (hash) {
-    loadContentPage(hash.replace("#", ""))
-  }
-  else {
-    loadContentPage('home')
-  }
+  loadContentPageFromHash(window.location.hash)
+
+  $(window).on('hashchange', function() {
+    loadContentPageFromHash(window.location.hash)
+  })
 
   // init page with correct style
   var stylename = Cookies.get('style')
