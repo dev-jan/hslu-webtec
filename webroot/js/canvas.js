@@ -2,7 +2,7 @@ var canvas, ctx, flag = false
 var currentX = 0
 var currentY = 0
 var isMousePressed = false
-var fillColor = "#ff0000"
+var fillColor = 'black'
 var lineWidth = 2
 
 function init() {
@@ -65,6 +65,10 @@ function clearContent() {
 
 function downloadCanvas() {
   ReImg.fromCanvas(canvas).downloadPng()
+}
+
+function setPencilColor(color) {
+  fillColor = color
 }
 
 $(document).ready(

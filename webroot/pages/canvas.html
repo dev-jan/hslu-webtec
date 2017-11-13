@@ -5,8 +5,16 @@
       <h2><i class="fa fa-pencil" aria-hidden="true"></i> Canvas Drawing Demo</h2>
       <canvas id="democanvas"></canvas>
       <script src="js/canvas.js"></script>
-      <button class="button-primary" onclick="downloadCanvas()">Download</button>
-      <button class="button-white" onclick="clearContent()">Clear</button>
+      <div>
+        <span>Pencil color: </span>
+        <button class="button" style="color: white; background-color: black;" onclick="setPencilColor('black')">Black</button>
+        <button class="button" style="color: white; background-color: red;" onclick="setPencilColor('red')">Red</button>
+        <button class="button" style="color: white; background-color: blue;" onclick="setPencilColor('blue')">Blue</button>
+      </div>
+      <div>
+        <button class="button-primary" onclick="downloadCanvas()">Download</button>
+        <button class="button-white" onclick="clearContent()">Clear</button>
+      </div>
     </div>
   </div>
 </div>
