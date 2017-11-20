@@ -39,6 +39,7 @@ function init() {
       clientY: touch.clientY
     });
     canvas.dispatchEvent(mouseEvent);
+    e.preventDefault()
   }, false)
   canvas.addEventListener("mousedown", function(e) {
     isMousePressed = true
