@@ -32,10 +32,24 @@ function init() {
       var y = mousePos.y
       ctx.fillCircle(x, y, lineWidth, fillColor)
   }
+  canvas.addEventListener("touchmove", function(e) {
+    var touch = e.touches[0];
+    var mouseEvent = new MouseEvent("mousemove", {
+      clientX: touch.clientX,
+      clientY: touch.clientY
+    });
+    canvas.dispatchEvent(mouseEvent);
+  }, false)
   canvas.addEventListener("mousedown", function(e) {
     isMousePressed = true
   }, false)
+  canvas.addEventListener("touchstart", function(e) {
+    isMousePressed = true
+  }, false)
   canvas.addEventListener("mouseup", function(e) {
+    isMousePressed = false
+  }, false)
+  canvas.addEventListener("touchend", function(e) {
     isMousePressed = false
   }, false)
   canvas.addEventListener("mouseout", function(e) {
