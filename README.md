@@ -1,6 +1,10 @@
 WEBTEC website Jan Bucher
 =========================
 
+Online-Version: https://webtec.jan-bucher.ch/ (deployed in Amazon EC2 cloud)
+
+This website is a small demo page for the HSLU module WEBTEC. The main goal of this module is to learn how to make web application. The focus is primary on the client side (HTML5, CSS and JS). Also techniques like responsive design and web accessibility is important.
+
 # Used frameworks
 - Skeleton CSS framework (http://getskeleton.com/)
 - JQuery 2.1.1
@@ -12,7 +16,7 @@ WEBTEC website Jan Bucher
 # Deployment
 Just serve all files of the webroot folder with a standard webserver.
 
-Configuration for apache2: [apache2-webtec.conf](apache2-webtec.conf)
+Democonfiguration for apache2: [apache2-webtec.conf](apache2-webtec.conf)
 
 Generate Letsencrypt certificate:
 ```
